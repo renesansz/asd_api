@@ -44,7 +44,20 @@ poetry shell
 ./manage.py loaddata manifesto/fixtures
 ```
 
-### 6. Run the server
+### 6. Setup Django Secret Key
+
+First, generate a random value for our secret key
+
+```
+./generate_secret.py
+```
+
+Then, go to `asd_api` folder and duplicate `.env.tpl` to `.env` and copy/paste the random value generated to `DJANGO_SECRET_KEY`
+```
+DJANGO_SECRET_KEY=<your-random-value>
+```
+
+### 7. Run the server
 ```
 ./manage.py runserver
 ```
@@ -53,13 +66,13 @@ poetry shell
 
 For this project, we used token based authentication whenever we do an API request.
 
-*Make sure you have a user registered in DB*, if not yet you can create your first super user account:
+*Make sure you have a user registered in DB*, otherwise you can create your first super user account:
 
 ```
 ./manage.py createsuperuser
 ```
 
-Create a token related to the account
+Create a token related to the account, it should print out the token value right after execution
 
 
 ```
