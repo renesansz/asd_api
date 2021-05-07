@@ -48,3 +48,26 @@ poetry shell
 ```
 ./manage.py runserver
 ```
+
+## Transacting with the API
+
+For this project, we used token based authentication whenever we do an API request.
+
+*Make sure you have a user registered in DB*, if not yet you can create your first super user account:
+
+```
+./manage.py createsuperuser
+```
+
+Create a token related to the account
+
+
+```
+./manage.py drf_create_token <your-username>
+```
+
+You can now send API request by adding this header in your request
+
+```
+Authorization: Token <your-token-key>
+```
