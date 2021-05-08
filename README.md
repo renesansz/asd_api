@@ -34,17 +34,7 @@ poetry install
 poetry shell
 ```
 
-### 4. Install database migrations
-```
-./manage.py migrate
-```
-
-### 5. Load initial data to DB
-```
-./manage.py loaddata manifesto/fixtures
-```
-
-### 6. Setup Django Secret Key
+### 4. Setup Django Secret Key
 
 First, generate a random value for our secret key
 
@@ -55,6 +45,16 @@ First, generate a random value for our secret key
 Then, go to `asd_api` folder and duplicate `.env.tpl` to `.env` and copy/paste the random value generated to `DJANGO_SECRET_KEY`
 ```
 DJANGO_SECRET_KEY=<your-random-value>
+```
+
+### 5. Install database migrations
+```
+./manage.py migrate
+```
+
+### 6. Load initial data to DB
+```
+./manage.py loaddata manifesto/fixtures
 ```
 
 ### 7. Run the server
