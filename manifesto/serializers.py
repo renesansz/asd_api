@@ -2,7 +2,7 @@ from django.utils import timezone
 
 from rest_framework import serializers
 
-from .models import EntryType, Entry
+from manifesto.models import EntryType, Entry
 
 class EntrySerializer(serializers.ModelSerializer):
     class Meta:

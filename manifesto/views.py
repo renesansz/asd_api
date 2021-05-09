@@ -6,8 +6,8 @@ from rest_framework.authentication import (
 )
 from rest_framework.permissions import IsAuthenticated
 
-from .models import EntryType, Entry
-from .serializers import EntryTypeSerializer, EntrySerializer
+from manifesto.models import EntryType, Entry
+from manifesto.serializers import EntryTypeSerializer, EntrySerializer
 
 class EntryViewSet(viewsets.ModelViewSet):
     authentication_classes = [TokenAuthentication, SessionAuthentication, BasicAuthentication]
