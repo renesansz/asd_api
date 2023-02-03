@@ -6,7 +6,7 @@ authors = ["Rene Padillo <developer@renesansz.me>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-Django = "^3.2.2"
+Django = "^3.2.17"
 djangorestframework = "^3.12.4"
 django-environ = "^0.4.5"
 django-cors-headers = "^3.7.0"
